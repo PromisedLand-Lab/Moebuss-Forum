@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{.folder}}</title>
+	<style type="text/css">
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<h1>{{.folder}}</h1>
+	{{range .images}}
+		<img src="{{.}}">
+	{{end}}
+</body>
+</html>

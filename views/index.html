@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comics</title>
+	<style type="text/css">
+		.comic {
+			display: inline-block;
+			margin: 10px;
+			text-align: center;
+			vertical-align: top;
+			width: 200px;
+		}
+		.comic img {
+			max-width: 100%;
+			height: auto;
+		}
+		.comic a {
+			color: black;
+			text-decoration: none;
+		}
+		.comic a:hover {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>Comics</h1>
+	{{range .comics}}
+		<div class="comic">
+			<a href="/comic/{{.name}}">
+				<img src="{{.cover}}">
+				<p>{{.name}}</p>
+			</a>
+		</div>
+	{{end}}
+</body>
+</html>
